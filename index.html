@@ -1,0 +1,503 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Resume Builder</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header-content">
+            <div class="logo">
+                <i class="fa-solid fa-file-lines"></i>
+                <span>Resume<span class="logo-highlight">Builder</span></span>
+            </div>
+
+            <button class="download-btn" id="downloadBtn">
+                <i class="fa-solid fa-download"></i>
+                Download PDF
+            </button>
+        </div>
+    </header>
+
+
+    <main class="container builder">
+
+        <!-- ================= FORM SECTION ================= -->
+
+        <section class="form-section">
+
+            <div class="section-heading">
+                <span class="heading-icon">
+                    <i class="fa-solid fa-user"></i>
+                </span>
+
+                <div>
+                    <h2>Build Your Resume</h2>
+                    <p>Enter your information below</p>
+                </div>
+            </div>
+
+
+            <!-- Personal Information -->
+
+            <div class="form-card">
+
+                <div class="card-title">
+                    <i class="fa-solid fa-user"></i>
+                    <h3>Personal Information</h3>
+                </div>
+
+                <div class="form-grid">
+
+                    <div class="input-group">
+                        <label for="nameInput">Full Name</label>
+                        <input type="text" id="nameInput" placeholder="e.g. Muhammad Abbas">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="jobTitleInput">Job Title</label>
+                        <input type="text" id="jobTitleInput" placeholder="e.g. Frontend Developer">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="emailInput">Email</label>
+                        <input type="email" id="emailInput" placeholder="example@gmail.com">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="phoneInput">Phone</label>
+                        <input type="tel" id="phoneInput" placeholder="+92 300 1234567">
+                    </div>
+
+                    <div class="input-group full-width">
+                        <label for="addressInput">Address</label>
+                        <input type="text" id="addressInput" placeholder="Peshawar, Pakistan">
+                    </div>
+
+                    <div class="input-group full-width">
+                        <label for="summaryInput">Professional Summary</label>
+                        <textarea id="summaryInput" rows="5" placeholder="Write a short professional summary..."></textarea>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- Education -->
+
+            <div class="form-card">
+
+                <div class="card-title">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <h3>Education</h3>
+                </div>
+
+                <div id="educationContainer">
+
+                    <div class="dynamic-item">
+                        <div class="form-grid">
+                            <div class="input-group">
+                                <label>Degree / Certificate</label>
+                                <input type="text" class="degreeInput" placeholder="e.g. FSc Computer Science">
+                            </div>
+
+                            <div class="input-group">
+                                <label>Institution</label>
+                                <input type="text" class="institutionInput" placeholder="e.g. Government College Peshawar">
+                            </div>
+
+                            <div class="input-group">
+                                <label>Start Year</label>
+                                <input type="text" class="startYearInput" placeholder="2022">
+                            </div>
+
+                            <div class="input-group">
+                                <label>End Year</label>
+                                <input type="text" class="endYearInput" placeholder="2024">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="add-btn" id="addEducationBtn"> <i class="fa-solid fa-plus"></i>
+                    Add Education
+                </button>
+            </div>
+
+
+            <!-- Experience -->
+
+            <div class="form-card">
+
+                <div class="card-title">
+                    <i class="fa-solid fa-briefcase"></i>
+                    <h3>Work Experience</h3>
+                </div>
+
+                <div id="experienceContainer">
+
+                    <div class="dynamic-item">
+
+                        <div class="form-grid">
+
+                            <div class="input-group">
+                                <label>Job Title</label>
+                                <input type="text" class="experienceTitleInput" placeholder="e.g. Frontend Developer">
+                            </div>
+
+                            <div class="input-group">
+                                <label>Company</label>
+                                <input type="text" class="companyInput" placeholder="e.g. ABC Technologies">
+                            </div>
+
+                            <div class="input-group">
+                                <label>Start Date</label>
+                                <input type="text" class="experienceStartInput" placeholder="Jan 2024">
+                            </div>
+
+                            <div class="input-group">
+                                <label>End Date</label>
+                                <input type="text" class="experienceEndInput" placeholder="Present">
+                            </div>
+
+                            <div class="input-group full-width">
+                                <label>Description</label>
+                                <textarea class="experienceDescriptionInput" rows="4" placeholder="Describe your responsibilities and achievements..."></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="add-btn" id="addExperienceBtn"><i class="fa-solid fa-plus"></i>
+                    Add Experience
+                </button>
+            </div>
+
+
+            <!-- Skills -->
+
+            <div class="form-card">
+
+                <div class="card-title">
+                    <i class="fa-solid fa-code"></i>
+                    <h3>Skills</h3>
+                </div>
+
+                <div class="skills-input-area">
+
+                    <div class="input-group">
+                        <label for="skillInput">Add Skill</label>
+
+                        <div class="skill-input-row">
+                            <input type="text" id="skillInput" placeholder="e.g. JavaScript">
+
+                            <button class="add-skill-btn" id="addSkillBtn"><i class="fa-solid fa-plus"></i>
+                                Add
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-tags" id="skillTags">
+
+                    <span class="skill-tag">
+                        HTML
+                        <button> <i class="fa-solid fa-xmark"></i></button>
+                    </span>
+
+                    <span class="skill-tag">
+                        CSS
+                        <button><i class="fa-solid fa-xmark"></i>
+                        </button>
+                    </span>
+
+                    <span class="skill-tag">
+                        JavaScript
+                        <button> <i class="fa-solid fa-xmark"></i>
+                        </button>
+                    </span>
+                </div>
+            </div>
+
+
+            <!-- Languages -->
+
+            <div class="form-card">
+
+                <div class="card-title">
+                    <i class="fa-solid fa-language"></i>
+                    <h3>Languages</h3>
+                </div>
+
+                <div class="form-grid">
+
+                    <div class="input-group">
+                        <label for="languageInput">Language</label>
+                        <input type="text" id="languageInput" placeholder="e.g. English">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="languageLevelInput">Level</label>
+
+                        <select id="languageLevelInput">
+                            <option value=""> Select Leve </option>
+                            <option value="Basic">  Basi </option>
+                            <option value="Intermediate">  Intermediat </option>
+                            <option value="Fluent"> Fluen </option>
+                            <option value="Native"> Nativ </option>
+                        </select>
+                    </div>
+                </div>
+
+                <button class="add-btn" id="addLanguageBtn"><i class="fa-solid fa-plus"></i>
+                    Add Language
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= RESUME PREVIEW ================================================================================================ -->
+
+        <section class="preview-section">
+
+            <div class="preview-top">
+                <div>
+                    <h2>Live Preview</h2>
+                    <p>Your resume will appear here</p>
+                </div>
+
+                <button class="clear-btn" id="clearBtn">
+                    <i class="fa-solid fa-rotate-left"></i>
+                    Clear
+                </button>
+
+            </div>
+
+
+            <div class="resume-paper" id="resumePreview">
+
+                <!-- Resume Header -->
+
+                <div class="resume-header">
+
+                    <div class="profile-image-wrapper">
+
+                        <div class="profile-placeholder">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+
+                    </div>
+
+                    <div class="resume-intro">
+
+                        <h1 id="resumeName">
+                            Your Name
+                        </h1>
+
+                        <h2 id="resumeJobTitle">
+                            Professional Title
+                        </h2>
+
+                        <div class="contact-info">
+
+                            <span id="resumeEmail">
+                                <i class="fa-solid fa-envelope"></i>
+                                your@email.com
+                            </span>
+
+                            <span id="resumePhone">
+                                <i class="fa-solid fa-phone"></i>
+                                +92 300 0000000
+                            </span>
+
+                            <span id="resumeAddress">
+                                <i class="fa-solid fa-location-dot"></i>
+                                Your Address
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Resume Body -->
+
+                <div class="resume-body">
+
+                    <!-- Left Column -->
+
+                    <div class="resume-left">
+
+                        <!-- Profile -->
+
+                        <div class="resume-block">
+
+                            <h3>
+                                <i class="fa-solid fa-user"></i>
+                                Profile
+                            </h3>
+
+                            <p id="resumeSummary">
+                                Your professional summary will appear here.
+                                Add your information from the form to create
+                                your resume.
+                            </p>
+
+                        </div>
+
+
+                        <!-- Skills -->
+
+                        <div class="resume-block">
+
+                            <h3>
+                                <i class="fa-solid fa-code"></i>
+                                Skills
+                            </h3>
+
+                            <ul class="resume-skills" id="resumeSkills">
+
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+
+                            </ul>
+
+                        </div>
+
+
+                        <!-- Languages -->
+
+                        <div class="resume-block">
+
+                            <h3>
+                                <i class="fa-solid fa-language"></i>
+                                Languages
+                            </h3>
+
+                            <div id="resumeLanguages">
+
+                                <div class="language-item">
+                                    <strong>English</strong>
+                                    <span>Fluent</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Right Column -->
+
+                    <div class="resume-right">
+
+                        <!-- Education -->
+
+                        <div class="resume-block">
+
+                            <h3>
+                                <i class="fa-solid fa-graduation-cap"></i>
+                                Education
+                            </h3>
+
+                            <div id="resumeEducation">
+
+                                <div class="resume-item">
+
+                                    <div class="resume-item-top">
+
+                                        <h4 class="studyField">
+                                            FSc Computer Sciencewwwww
+                                        </h4>
+
+                                        <span class="study-years">
+                                            2022 - 2024
+                                        </span>
+
+                                    </div>
+
+                                    <p class="institution">
+                                        Government College Peshawar
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Experience -->
+
+                        <div class="resume-block">
+
+                            <h3>
+                                <i class="fa-solid fa-briefcase"></i>
+                                Experience
+                            </h3>
+
+                            <div id="resumeExperience">
+
+                                <div class="resume-item">
+
+                                    <div class="resume-item-top">
+
+                                        <h4>
+                                            Frontend Developer
+                                        </h4>
+
+                                        <span>
+                                            2024 - Present
+                                        </span>
+
+                                    </div>
+
+                                    <p class="institution">
+                                        Company Name
+                                    </p>
+
+                                    <p class="experience-text">
+                                        Your work experience description
+                                        will appear here.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
