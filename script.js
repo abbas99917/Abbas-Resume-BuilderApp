@@ -93,4 +93,27 @@ else if (
 
 
 
+// experienceTitleInput - sections
+const experienceContainer = document.querySelector("#experienceContainer")
+const experienceTitleInput = document.querySelector(".experienceTitleInput")
+const jobtitle = document.querySelector(".jobtitle")
+
+//
+const companyInput = document.querySelector(".companyInput")
+const institute = document.querySelector(".institution")
+
+experienceContainer.addEventListener("input",(e)=>{
+    if(e.target.classList.contains("experienceTitleInput")){
+        jobtitle.textContent = e.target.value
+    }
+    else if(e.target.classList.contains("companyInput")){
+        institute.textContent = e.target.value;
+    }
+
+    // const startYears = experienceContainer.querySelector(".experienceStartInput")
+    // const endsYears = experienceContainer.querySelector(".experienceEndInput")
+
+})
+
+
 
