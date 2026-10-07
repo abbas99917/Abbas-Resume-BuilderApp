@@ -110,8 +110,7 @@ experienceContainer.addEventListener("input",(e)=>{
         institute.textContent = e.target.value;
     }
 
-    // const startYears = experienceContainer.querySelector(".experienceStartInput")
-    // const endsYears = experienceContainer.querySelector(".experienceEndInput")
+
 
 })
 
